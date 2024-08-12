@@ -1,0 +1,9 @@
+FROM python:3.9
+
+RUN pip install pandas
+
+COPY docker_image.py /app/docker_image.py
+
+WORKDIR /app
+
+CMD ["python", "docker_image.py"]
